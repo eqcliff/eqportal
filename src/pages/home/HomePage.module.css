@@ -1,0 +1,64 @@
+.body {
+  @apply min-h-screen bg-[#17181e];
+}
+
+.mainContainer {
+  @apply px-8 py-6;
+}
+
+.portalStructure {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.section {
+  @apply bg-[#21212a] rounded-xl p-6;
+}
+
+.section h2 {
+  @apply text-xl font-semibold text-[#fcfcfc] mb-4;
+}
+
+.buttonGrid {
+  @apply grid grid-cols-1 gap-3;
+}
+
+.columnButtonGrid {
+  @apply grid grid-cols-1 gap-3;
+}
+
+.rowButtonGrid {
+  @apply grid grid-cols-2 gap-3;
+}
+
+.customFrontOfficeGrid {
+  @apply grid grid-cols-2 gap-3;
+}
+
+.button {
+  @apply block w-full px-4 py-3 bg-[#2a2b36] hover:bg-[#3f3f4d] text-[#fcfcfc] rounded-lg transition-colors duration-200
+         hover:text-[#ecde65] hover:border-b hover:border-[#ecde65] text-center font-medium;
+}
+
+.button.wide {
+  @apply col-span-2;
+}
+
+.frontoffice {
+  @apply col-span-1 md:col-span-2;
+}
+
+.middleoffice {
+  @apply col-span-1;
+}
+
+.backoffice {
+  @apply col-span-1;
+}
+
+.infrastructure {
+  @apply col-span-1;
+}
+
+.administration {
+  @apply col-span-1;
+}

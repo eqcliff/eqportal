@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "PP Formula";
+  src: url("/fonts/PPFormula-SemiExtendedRegular.woff2") format("woff2"),
+    url("/fonts/PPFormula-SemiExtendedRegular.woff") format("woff"),
+    url("/fonts/PPFormula-SemiExtendedRegular.ttf") format("truetype"),
+    url("/fonts/PPFormula-SemiExtendedRegular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --primary-color: #5ee5d4;
+  --primary-hover: #4cd4c3;
+  --text-color: #fcfcfc;
+  --bg-color: #16181f;
+  --input-bg: #21222a;
+  --border-color: #3f3f4d;
+}
+
+@layer base {
+  body {
+    @apply bg-[#16181f] text-[#fcfcfc] font-['PP_Formula'];
+  }
+
+  /* Webkit scrollbar styles */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #21222a;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #3f3f4d;
+    border-radius: 5px;
+    border: 2px solid #21222a;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4f4f5d;
+  }
+
+  /* Firefox scrollbar styles */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #3f3f4d #21222a;
+  }
+}
+
+@layer components {
+  .accordion-trigger {
+    @apply text-[#fcfcfc] hover:no-underline;
+  }
+  
+  .accordion-trigger[data-state='open'] > svg {
+    @apply rotate-180;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-text {
+    @apply bg-gradient-to-r from-[#5ee5d4] to-[#f4f5ac] text-transparent bg-clip-text;
+  }
+}
